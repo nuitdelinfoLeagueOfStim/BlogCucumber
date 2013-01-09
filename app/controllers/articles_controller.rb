@@ -1,0 +1,19 @@
+class ArticlesController < ApplicationController
+  def index 
+    @articles = Article.all
+    respond_to do |format|
+      format.html #index.hmtl.erb
+    end
+  end
+  def new
+     @article = Article.new
+     respond_to do |format|
+       format.html #new.html.erb
+     end
+  end
+  def create
+    @article = Article.create!(params[:article])
+    flash[:notice] = "New article created."
+    redirect_to articles_path
+  end
+end
