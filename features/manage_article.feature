@@ -12,12 +12,10 @@ Feature: Manage Articles
   Scenario: Create Valid Article
     Given I have no articles
     And I am on the list of articles
-    Then I should see "New Article"
-    When I follow "New Article"
+    When I go to the creation of articles 
     And I fill in "Title" with "Spuds"
     And I fill in "Content" with "Delicious potato wedges!"
     And I press "Create"
-    Then I should see "New article created."
-    And I should see "Spuds"
+    Then I should see "Spuds"
     And I should see "Delicious potato wedges!"
     And I should have 1 article

@@ -1,5 +1,6 @@
 <h1>Article#index</h1>
-<p>Find me in app/views/article/index.html.erb</p>
+<p>Find me in app/views/article/show.html.erb</p>
+
 <table>
 <% @articles.each do |article| %>
   <tr>
@@ -8,8 +9,6 @@
   </tr>
 <% end %>
 </table>
-New Article
 
-<p><%= link_to "e", new_article_path %></p>
-<%= button_to "New Article", new_article_path %>
+<%= link_to "New Article", new_article_path %>
 

@@ -8,8 +8,13 @@
   </tr>
 <% end %>
 </table>
+<% form_tag('posts') %>
+  <%= text_field_tag "subject" %>
+  <%= submit_tag 'Submit' %>
+  
+<% end %>
 New Article
 
-<p><%= link_to "e", new_article_path %></p>
+<%= link_to "New Article", new_article_path %>
 <%= button_to "New Article", new_article_path %>
 
